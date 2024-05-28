@@ -1,26 +1,17 @@
 function makeTransaction(quantity, pricePerDroid, customerCredits) {
-    quantity = Number(quantity);
-    pricePerDroid = Number(pricePerDroid);
-    customerCredits = Number(customerCredits);
+     quantity = Number(quantity);
+     pricePerDroid = Number(pricePerDroid);
+     customerCredits = Number(customerCredits);
 
-    const totalPrice = quantity * pricePerDroid
+    const totalPrice = quantity * pricePerDroid;
 
-    if (totalPrice <= customerCredits) {
-        return `Yuor ordered ${quantity} droids worth ${totalPrice} credits `;
-    } else if (totalPrice <= customerCredits) {
-        return `Yuor ordered ${quantity} droids worth ${totalPrice} credits `;
+    if (totalPrice > customerCredits) {
+        return ` Insufficient funds! `;
+    } else {
+        return `You ordered ${quantity} droids worth ${totalPrice} credits `;
         
-    } else if (totalPrice >= customerCredits) {
-        return `Insufficient funds! `;
-        
-    } else if (totalPrice >= customerCredits) {
-        return `Insufficient funds! `;
-        
-    } else if (totalPrice <= customerCredits) {
-        return `Yuor ordered ${quantity} droids worth ${totalPrice} credits `;
-     
+    
     }
-
 }
 
 
